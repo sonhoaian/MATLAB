@@ -1,3 +1,4 @@
+clear, clearvars, clc;
 format long
 syms x0;
 %Du lieu dau vao

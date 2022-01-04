@@ -1,5 +1,6 @@
+%pp tinh sai phan, ham Largrange
 %cai dat ban dau
-clear alls;
+clear, clearvars, clc;
 format long;
 
 X=0.1:0.2:1.3;

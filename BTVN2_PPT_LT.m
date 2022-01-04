@@ -8,6 +8,7 @@ doiso = [0.77460, 0.00];
 fHamSo = @(x) (100.*exp(-(x.*2)).*(sin(x.*2*pi)).^2);
 
 k = 0:(cantren-canduoi)/iSotam:0.5;%tham so tinh toan
+
 %tham so do thi
 dStep = 1/720;
 m = canduoi:dStep:cantren;

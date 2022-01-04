@@ -24,5 +24,16 @@ classdef BTVN_2_PPT_LT <handle
              %tinh tich phan
              tichphan = ((cantren-canduoi)/2)*(thuasotrongluong(1)*in_hamso(0 - doiso(1)) + thuasotrongluong(2)*in_hamso(doiso(2)) + thuasotrongluong(1)*in_hamso(doiso(1)));
          end
+
+         function [giatri] = ppEurle(giatri_x, step, y0, hamso)
+            isize = length(giatri_x);
+            y = zeros(1,isize);
+            y(1) = y0;
+            for i = 1:isize
+              y(i+1) = y(i) + step* hamso(giatri_x(i), y(i));
+              %T(i+1)=A+i*(i+1)
+            end
+            giatri = y;
+         end
     end
 end
