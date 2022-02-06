@@ -20,7 +20,6 @@ dh_gx_y = @(x,y) (8*y);
 
 while(abs(Delta_X(1)) > esp && abs(Delta_X(2)) > esp)
     iloop = iloop + 1;
-    fprintf("the %d loop \n ------------------------\n", iloop);
     x0 = X0(1); y0 = X0(2);
     %partial derivative matris
     Mx = [dh_fx_x(x0, y0), dh_fx_y(x0, y0);dh_gx_x(x0, y0), dh_gx_y(x0, y0)];
@@ -29,8 +28,8 @@ while(abs(Delta_X(1)) > esp && abs(Delta_X(2)) > esp)
     F_xy = [-fx(x0,y0);-gx(x0, y0)];
     
     %print F_xy, Mx matrixes
-    disp(Mx);
-    disp(F_xy);
+%     disp(Mx);
+%     disp(F_xy);
     
     %delta x
     Delta_X = Mx\F_xy;%%dung tam giai quye bang phuong phap Gauss

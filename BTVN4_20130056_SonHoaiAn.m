@@ -1,7 +1,7 @@
 %he hai phuong trinh vi phan cap 1
 %rubgukuta bac 4
 clear, clearvars, clc;
-format rational;
+%format rational;
 c = 0.2;
 k = 0.3;
 m = 1;
@@ -30,15 +30,15 @@ for i = 1 : length(x)-1
     m4 = step*g(t(i) + step, x(i) + k3, v(i) + m3);
 
     x(i + 1) = x(i) + (1/6)*(k1 + 2*k2 + 2*k3 + k4);
-    v(i + 1) = v(i) + (1/6)*(m1 + 2*m2 + 2*m3 + m4);
+    v(i + 1) = v(i) + (1/6)*(m1 + 2*m2 + 2*m3 + m4);    
 end
 
-format default;
+%format default;
 %length(t)
-for i =1: length(t)
-     fprintf("gia tri tai t(%i) = %.2f của x(%i) = %.8f, va v(%i) = %.8f\n" ...
-         ,i, t(i), i, x(i), i, v(i));
-end
+% for i =1: length(t)
+%      fprintf("gia tri tai t(%i) = %.2f của x(%i) = %.8f, va v(%i) = %.8f\n" ...
+%          ,i, t(i), i, x(i), i, v(i));
+% end
 
 
 plot(t,x,'r', 'LineWidth', 1.4);

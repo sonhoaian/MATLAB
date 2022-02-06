@@ -8,9 +8,9 @@ matrixA = [0 45 1 ; 4 0 2; 8 1 6];
 matrixB = [1; 1; 1];
 %addMatrix = [matrixA matrixB]; %[181/356          3/89         -46/89 ]
 %addMatrix = [0  2 3 4; 5 6 7 8; 9 1 2 3];%[0 -1 2]
-%addMatrix = [1 1 1 1; 1 2 4 -1; 1 3 9 1];%[7 - 8 2]
+addMatrix = [1 1 1 1; 1 2 4 -1; 1 3 9 1];%[7 - 8 2]
 %addMatrix = [1 2 1 4 13;  2 0 4 3 28; 4 2 2 1 20;-3 1 3 2 6];
-addMatrix =[5 3 2 -2; 1 1 0 2; 2 -1 1 3];
+%addMatrix =[5 3 2 -2; 1 1 0 2; 2 -1 1 3];
 mtraBD = addMatrix;
 size_mtr = size(addMatrix);
 
@@ -57,6 +57,7 @@ function [a] = biendoisocap(matrix, thamsodong)
         else
             thamso = matrix(thamsodong ,thamsodong)/a(i+1,thamsodong);
             a(i + 1, :) = a(i + 1, :)*thamso - a(thamsodong,:);
+            break;
         end
     end
 end
